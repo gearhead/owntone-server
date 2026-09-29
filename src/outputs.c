@@ -454,9 +454,7 @@ device_list_sort(void)
 	{
 	  next = device->next;
 	  if ( (outputs_priority(device) > outputs_priority(next)) ||
-	       (outputs_priority(device) == outputs_priority(next) &&
-	        device->name && next->name &&
-	        strcasecmp(device->name, next->name) > 0) )
+	       (outputs_priority(device) == outputs_priority(next) && strcasecmp(device->name, next->name) > 0) )
 	    {
 	      if (device == outputs_device_list)
 		outputs_device_list = next;
